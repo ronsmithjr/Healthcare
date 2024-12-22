@@ -13,8 +13,9 @@ import { CourseService } from '../courses.service';
 export class CourseComponent {
   title = "List of courses";
   courses: string[];
-  imageUrl: string = "";
+  imageUrl: string = "https://github.com/ronsmithjr/Healthcare/blob/66c796c3943dfc14a8f22f9dc24c602f4cb822a1/mynutritionhelper/src/assets/R.jpg";
 
+  colSpan = 2;
   constructor(service: CourseService){
     this.courses = service.getCourses()
   }
