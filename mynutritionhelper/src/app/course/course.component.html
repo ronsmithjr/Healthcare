@@ -5,9 +5,45 @@
         {{ course }}
     </li>
 </ul>
-<img src="https://github.com/ronsmithjr/Healthcare/blob/main/mynutritionhelper/src/assets/R.jpg" />
-<img [src]="imageUrl" alt="Course Image">&nbsp;
-<button class="btn btn-primary">Save</button>
+<!-- <img src="https://github.com/ronsmithjr/Healthcare/blob/main/mynutritionhelper/src/assets/R.jpg" />
+<img [src]="imageUrl" alt="Course Image">&nbsp; -->
+<button class="btn btn-primary" [class.active]="isActive">Save</button>
+<br />
+<br />
+<button [style.backgroundColor]="isActive ?  'blue': 'white'">Save 2</button>
+<br />
+<br />
+<div (click)="onDivClicked()">
+    <button (click)="onSave($event)">Save 3</button>
+</div>
+<!--Angular shortcut-->
+<input (keyup.enter)="onKeyup()" />
+<br />
+<br />
+<input (keyup) = "onKeyup2($event)" />
+<br />
+<br />
+<!--Template Variables-->
+<input #email (keyup.enter) = "onKeyup3(email.value)" />
+
+<br />
+<br />
+<!--Two way binding-->
+<input [(ngModel)]="email2" (keyup.enter)="onKeyup4()" />
+<hr />
+
+{{course.title | uppercase | lowercase}} <br />
+Students: {{course.students | number}} <br />
+Rating: {{course.rating | number:'1.1'}} <br />
+Price: {{course.price | currency:'AUD':true: '3.2-2'}} <br />
+Release Date: {{course.releaseDate | date:'shortDate'}} <br />
+
+
+
+<hr />
+{{text | summary: 5 }}
+
+<hr />
 <table>
 
     <tr>

@@ -4,7 +4,6 @@ import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 
-
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent],
