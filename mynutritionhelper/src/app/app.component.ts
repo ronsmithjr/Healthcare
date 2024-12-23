@@ -12,4 +12,9 @@ import { AuthorsComponent } from './authors/authors.component';
 })
 export class AppComponent {
   title = 'My Nutrition Helper';
+
+  post = {
+    title: "Title",
+    isFavorite: true
+  }
 }

@@ -1,6 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
 
 body{
     padding: 20px;
 }
+
+.star-rating {
+    font-size: 2rem;
+    color: gold;
+    cursor: pointer;
+  }
+  
+  .star-rating .fa {
+    margin-right: 5px;
+  }

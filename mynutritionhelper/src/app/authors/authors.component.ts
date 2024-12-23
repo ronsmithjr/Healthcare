@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { AuthorsService } from '../authors.service';
 import { CommonModule } from '@angular/common';
+import { FavoritesComponent } from '../favorites/favorites.component';
+
 
 @Component({
   selector: 'app-authors',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FavoritesComponent],
   templateUrl: './authors.component.html',
   styleUrl: './authors.component.css'
 })
