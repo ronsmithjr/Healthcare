@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthorsService } from '../authors.service';
 import { CommonModule } from '@angular/common';
 import { FavoritesComponent } from '../favorites/favorites.component';
+import { FavoriteChangedEventArgs } from '../favorites/favorites.component';
 
 
 @Component({
@@ -15,11 +16,18 @@ export class AuthorsComponent {
 
   title: string = "List of Authors";
   authors: string[];
-  /**
+
+  post = {
+    isFavorite: false
+  }
+  /** 
    *
    */
   constructor(service: AuthorsService) {
      this.authors = service.getAuthors();
   }
  
+  onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
+    console.log("Favorite changed", eventArgs);
+  }
 }

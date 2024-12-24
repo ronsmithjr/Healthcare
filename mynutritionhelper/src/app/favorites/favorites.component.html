@@ -1,10 +1,16 @@
 <!-- <p>favorites works!</p> -->
-
-
 <div class="star-rating">
+  <span
+        (click)="onClick()" 
+        class="fa" 
+        [ngClass]="{'fa-star': isFavorite, 'fa-star-o': !isFavorite}">
+  </span>
+  </div>
+
+<!-- <div class="star-rating">
   <span *ngFor="let star of stars; let i = index" 
         (click)="rate(i + 1)" 
         class="fa" 
         [ngClass]="{'fa-star': i < favorite.rating, 'fa-star-o': i >= favorite.rating}">
   </span>
-</div>
+</div> -->
