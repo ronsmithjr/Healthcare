@@ -7,12 +7,13 @@ import { PanelComponent } from "./panel/panel.component";
 import { LikeComponent } from "./like/like.component";
 import { CommonModule } from '@angular/common';
 import { InputFormatDirective } from './input-format.directive';
+import { ZippyComponent } from "./zippy/zippy.component";
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, CommonModule, InputFormatDirective],
+  imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, CommonModule, InputFormatDirective, ZippyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

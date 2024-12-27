@@ -1,0 +1,14 @@
+<p>zippy works!</p>
+
+
+
+<div *ngIf="authors.length > 0 then hasAuthors else noAuthors"></div>
+<ng-template #hasAuthors>
+    <ul *ngFor="let author of authors">
+        <li>{{author.name}}</li>
+    </ul>
+</ng-template>
+
+<ng-template #noAuthors>
+    <h2>There are no authors to show</h2>
+</ng-template>
