@@ -8,16 +8,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './zippy.component.css'
 })
 export class ZippyComponent {
-    authors: any[];
+  isShippingExpanded: boolean = false;
+  isBillingExpanded: boolean = false;
+    //authors: any[];
     /**
      *
      */
     constructor() {
-      this.authors = [
-        // {name: 'Maya Angelo', desc: 'desc1'},
-        // {name: 'Edgar Allen Poe', desc: 'desc2'},
-        // {name: 'Stephen King', desc: 'desc3'}
-    ];
+    //   this.authors = [
+    //     {name: 'Maya Angelo', desc: 'desc1'},
+    //     {name: 'Edgar Allen Poe', desc: 'desc2'},
+    //     {name: 'Stephen King', desc: 'desc3'}
+    // ];
       
     }
+
+    shippingToggle(){
+        this.isShippingExpanded = !this.isShippingExpanded
+    }
+    billingToggle(){
+      this.isBillingExpanded = !this.isBillingExpanded
+  }
 }

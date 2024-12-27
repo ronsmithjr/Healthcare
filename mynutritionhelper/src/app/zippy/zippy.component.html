@@ -1,8 +1,41 @@
-<p>zippy works!</p>
 
+<div class="card" style="padding-left:20px; padding-right: 20px;" (click)="shippingToggle()">
+    <div class="card-heading">
+        <ng-content select=".heading"><h2>Shipping Details</h2></ng-content>
+        <span style="float: right;">
+            <i class="fa" [ngClass]="{
+                'fa-chevron-up': !isShippingExpanded,
+                'fa-chevron-down': isShippingExpanded
+            }"></i>
+        </span>
 
+    </div>
 
-<div *ngIf="authors.length > 0 then hasAuthors else noAuthors"></div>
+    <div class="card-body" *ngIf="isShippingExpanded">
+        <p>Shipping Details Content goes here.</p>
+    </div>
+
+</div>
+
+<div class="card" style="padding-left:20px; padding-right: 20px;" (click)="billingToggle()">
+    <div class="card-heading col">
+
+        <ng-content select=".heading"><h2>Billing Details</h2></ng-content>
+        <span style="float: right;">
+            <i class="fa" [ngClass]="{
+            'fa-chevron-up': !isBillingExpanded,
+            'fa-chevron-down': isBillingExpanded
+        }"></i>
+        </span>
+    </div>
+
+    <div class="card-body" *ngIf="isBillingExpanded">
+        <p>Billing Details Content goes here.</p>
+    </div>
+
+</div>
+
+<!-- <div *ngIf="authors.length > 0 then hasAuthors else noAuthors"></div>
 <ng-template #hasAuthors>
     <ul *ngFor="let author of authors">
         <li>{{author.name}}</li>
@@ -11,4 +44,4 @@
 
 <ng-template #noAuthors>
     <h2>There are no authors to show</h2>
-</ng-template>
+</ng-template> -->
