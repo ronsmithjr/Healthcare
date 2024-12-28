@@ -15,3 +15,7 @@ body{
   .star-rating .fa {
     margin-right: 5px;
   }
+
+  .form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+  }

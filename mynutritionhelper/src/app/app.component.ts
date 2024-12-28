@@ -9,12 +9,15 @@ import { CommonModule } from '@angular/common';
 import { InputFormatDirective } from './input-format.directive';
 import { ZippyComponent } from "./zippy/zippy.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
+import { NewCourseFormComponent } from "./new-course-form/new-course-form.component";
+import { SignupFormComponent } from "./signup-form/signup-form.component";
 
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, CommonModule, InputFormatDirective, ZippyComponent, ContactFormComponent],
+  imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, 
+    CommonModule, InputFormatDirective, ZippyComponent, ContactFormComponent, NewCourseFormComponent, SignupFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -31,7 +34,7 @@ export class AppComponent implements OnInit {
   viewMode: string = 'something else';
 
   ngOnInit(): void {
-    console.log("Courses:" + this.courses);
+    //console.log("Courses:" + this.courses);
   }
 
   onAdd() {
