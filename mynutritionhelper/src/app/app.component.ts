@@ -11,13 +11,14 @@ import { ZippyComponent } from "./zippy/zippy.component";
 import { ContactFormComponent } from "./contact-form/contact-form.component";
 import { NewCourseFormComponent } from "./new-course-form/new-course-form.component";
 import { SignupFormComponent } from "./signup-form/signup-form.component";
+import { NewCourseV2FormComponent} from "./new-course-v2-form/new-course-v2-form.component";
 
 
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, 
-    CommonModule, InputFormatDirective, ZippyComponent, ContactFormComponent, NewCourseFormComponent, SignupFormComponent],
+    CommonModule, InputFormatDirective, ZippyComponent, ContactFormComponent, NewCourseFormComponent, SignupFormComponent, NewCourseV2FormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

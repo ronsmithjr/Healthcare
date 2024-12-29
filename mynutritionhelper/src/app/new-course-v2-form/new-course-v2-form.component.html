@@ -1,0 +1,20 @@
+<p>new-course-v2-form works!</p>
+
+<form>
+    <input type="text" class="form-control" 
+    (keydown.enter) = "addTopic(topic)"
+    #topic
+    title="title"
+    id="courses"
+    name="courses">
+    <ul class="list-group">
+        <li 
+        #topic
+            *ngFor="let topic of topics.controls"                     
+            class="list-group-item">
+        {{ topic.value }}
+        </li>
+    </ul>
+    <button type="button" id="btnClick" name="btnClick" class="btn btn-primary"
+     (click)="clickMe()"> Click Me!</button>
+</form>
