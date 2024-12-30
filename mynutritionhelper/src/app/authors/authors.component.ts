@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthorsService } from '../authors.service';
+import { AuthorsService } from '../services/authors.service';
 import { CommonModule } from '@angular/common';
 import { FavoritesComponent } from '../favorites/favorites.component';
 import { FavoriteChangedEventArgs } from '../favorites/favorites.component';

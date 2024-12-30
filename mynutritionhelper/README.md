@@ -5,6 +5,10 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 ## Angular API
 [Angular API](https://v17.angular.io/api)
 
+## JsonPlaceholder
+Fake Online REST API for Testing and Protyping
+[JsonPlaceholder](https://jsonplaceholder.typicode.com/)
+
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
 ## Code scaffolding

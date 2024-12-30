@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CourseService } from '../courses.service';
+import { CourseService } from '../services/courses.service';
 import { FormsModule } from '@angular/forms';
 import { SummaryPipe } from '../summary.pipe';
 

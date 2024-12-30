@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CoursesComponent } from './courses.component';
+import { CoursesComponent } from './services/courses.component';
 import { CourseComponent } from './course/course.component';
 import { AuthorsComponent } from './authors/authors.component';
 import { PanelComponent } from "./panel/panel.component";
@@ -13,6 +13,9 @@ import { NewCourseFormComponent } from "./new-course-form/new-course-form.compon
 import { SignupFormComponent } from "./signup-form/signup-form.component";
 import { NewCourseV2FormComponent} from "./new-course-v2-form/new-course-v2-form.component";
 import { ChangePasswordFormComponent } from "./change-password-form/change-password-form.component";
+import { PostsComponent } from "./posts/posts.component";
+
+
 
 
 
@@ -20,7 +23,7 @@ import { ChangePasswordFormComponent } from "./change-password-form/change-passw
   selector: 'app-root',
   imports: [RouterOutlet, CoursesComponent, CourseComponent, AuthorsComponent, PanelComponent, LikeComponent, 
     CommonModule, InputFormatDirective, ZippyComponent, ContactFormComponent, NewCourseFormComponent, 
-    SignupFormComponent, NewCourseV2FormComponent, ChangePasswordFormComponent],
+    SignupFormComponent, NewCourseV2FormComponent, ChangePasswordFormComponent, PostsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
