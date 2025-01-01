@@ -18,6 +18,11 @@ GRANT INSERT ON nutrition.OneServing TO webuser;
 GRANT UPDATE ON nutrition.OneServing TO webuser;
 GRANT DELETE ON nutrition.OneServing TO webuser;
 
+GRANT SELECT ON nutrition.FoodCategories TO webuser;
+GRANT INSERT ON nutrition.FoodCategories TO webuser;
+GRANT UPDATE ON nutrition.FoodCategories TO webuser;
+GRANT DELETE ON nutrition.FoodCategories TO webuser;
+
 /* Check user membership in roles*/
 SELECT 
     dp.name AS MemberName,
