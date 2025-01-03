@@ -1,4 +1,1 @@
-DROP USER ronsmith245;
-GO
-CREATE USER ronsmith245 FOR LOGIN ronsmith245;
-GO
+ConsumptionTime	    FoodEntry	Servings	Calories	Notes
