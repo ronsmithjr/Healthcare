@@ -109,7 +109,7 @@ INSERT INTO nutrition.OneServing (FoodItem, Amount, Measure, Calories, Nutrition
 
 
 
-Select FoodItem, Amount, Measure, Calories, NutritionInfoSource, f.CategoryName, Notes, StoreSource 
+Select FoodItem, Amount, Measure, Calories, NutritionInfoSource, f.CategoryName AS CategoryName, Notes, StoreSource 
 from nutrition.OneServing n left join nutrition.FoodCategories f on n.FoodCategoryId = f.CategoryID;
 
 
