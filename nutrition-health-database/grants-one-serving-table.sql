@@ -1,1 +1,0 @@
-GRANT SELECT, INSERT, UPDATE, DELETE ON nutrition.OneServing TO [YourUserOrRole];
