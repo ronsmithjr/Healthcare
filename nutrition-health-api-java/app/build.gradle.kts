@@ -8,7 +8,12 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    id("org.springframework.boot") version "3.3.5"
+	id("io.spring.dependency-management") version "1.1.6"
 }
+
+group = "net.ronsconsulting"
+version = "0.0.1-SNAPSHOT"
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -17,20 +22,35 @@ repositories {
 
 dependencies {
     // Use JUnit test framework.
-    testImplementation(libs.junit)
+    // testImplementation(libs.junit)
+    // Use JUnit test framework.
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 
-    // This dependency is used by the application.
-    implementation(libs.guava)
+    // // This dependency is used by the application.
+    // implementation(libs.guava)
+     implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.slf4j:slf4j-api:1.7.32")
+    implementation("org.slf4j:slf4j-simple:1.7.32")
+    implementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
+
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(23)
+        languageVersion = JavaLanguageVersion.of(22)
     }
 }
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "net.ronsconsulting.App"
 }
+
+tasks.withType<Test> {
+	useJUnitPlatform()
+}
+
